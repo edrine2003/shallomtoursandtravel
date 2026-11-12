@@ -3,6 +3,11 @@
    ============================================= */
 'use strict';
 
+/* =============================================
+   PAGE LOAD FADE-IN
+   ============================================= */
+window.addEventListener('load', () => document.body.classList.add('loaded'));
+
 /* ---- Footer year ---- */
 const yearEl = document.getElementById('footer-year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -17,7 +22,6 @@ document.querySelectorAll('input[type="date"]').forEach(i => i.setAttribute('min
 const navToggle = document.getElementById('nav-toggle');
 const mainNav   = document.getElementById('main-nav');
 
-// Overlay
 const navOvl = document.createElement('div');
 Object.assign(navOvl.style, {
   position:'fixed', inset:'0', background:'rgba(0,0,0,.35)',
@@ -51,15 +55,16 @@ navToggle?.addEventListener('click', () =>
   mainNav.classList.contains('is-open') ? closeNav() : openNav()
 );
 navOvl.addEventListener('click', closeNav);
-mainNav?.querySelectorAll('.nav__link:not(.nav__drop-btn)').forEach(l => l.addEventListener('click', closeNav));
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+mainNav?.querySelectorAll('.nav__link:not(.nav__drop-btn)').forEach(l =>
+  l.addEventListener('click', closeNav)
+);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeNav(); } });
 
 /* Mobile dropdown toggles */
 mainNav?.querySelectorAll('.nav__drop-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.nav__item--drop');
     const isOpen = item.classList.contains('open');
-    // close all others
     mainNav.querySelectorAll('.nav__item--drop.open').forEach(el => el.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
     btn.setAttribute('aria-expanded', String(!isOpen));
@@ -76,8 +81,41 @@ if (header) {
   new IntersectionObserver(([e]) => {
     header.style.boxShadow = e.isIntersecting
       ? '0 2px 10px rgba(0,0,0,.06)'
-      : '0 2px 20px rgba(0,0,0,.14)';
+      : '0 2px 20px rgba(0,0,0,.18)';
   }).observe(sentinel);
+}
+
+/* =============================================
+   SCROLL SPY — active nav link
+   ============================================= */
+const navSections = ['destinations','packages','about','reviews','contact','services','visa'];
+const navLinks = [...(mainNav?.querySelectorAll('.nav__link:not(.nav__drop-btn)') || [])];
+
+function updateActiveNav() {
+  let current = '';
+  navSections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && window.scrollY >= el.offsetTop - 120) current = id;
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('nav__link--active');
+    if (current && link.getAttribute('href') === `#${current}`) {
+      link.classList.add('nav__link--active');
+    }
+  });
+}
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+/* =============================================
+   BACK TO TOP
+   ============================================= */
+const btt = document.getElementById('back-to-top');
+if (btt) {
+  window.addEventListener('scroll', () => {
+    const show = window.scrollY > 400;
+    btt.hidden = !show;
+  }, { passive: true });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
 /* =============================================
@@ -90,16 +128,12 @@ const pkgNoRes   = document.getElementById('pkg-no-result');
 searchForm?.addEventListener('submit', e => {
   e.preventDefault();
   const dest = e.target.destination.value;
-
-  // Show all if no destination
   if (!dest) {
     pkgGrid?.querySelectorAll('.pkg-card').forEach(c => c.style.display = '');
     if (pkgNoRes) pkgNoRes.hidden = true;
     return;
   }
-
   document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
   setTimeout(() => {
     let count = 0;
     pkgGrid?.querySelectorAll('.pkg-card').forEach(c => {
@@ -152,7 +186,6 @@ document.addEventListener('keydown', e => {
 document.getElementById('btn-book-header')?.addEventListener('click', () => openModal('modal-book'));
 document.getElementById('btn-visa')?.addEventListener('click', () => openModal('modal-visa'));
 
-// Global: called by inline onclick on package cards
 window.openBookModal = function(btn) {
   openModal('modal-book');
   const pkg = btn?.dataset?.package;
@@ -172,7 +205,7 @@ function trapFocus(el) {
     else             { if (document.activeElement === last)  { e.preventDefault(); first.focus(); } }
   }
   el.addEventListener('keydown', h);
-  new MutationObserver(() => { if (el.hidden) { el.removeEventListener('keydown', h); } })
+  new MutationObserver(() => { if (el.hidden) el.removeEventListener('keydown', h); })
     .observe(el, { attributes: true, attributeFilter: ['hidden'] });
 }
 
@@ -184,26 +217,47 @@ const waUrl = msg => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
 
 function validate(form) {
   form.querySelectorAll('.fg__err').forEach(e => e.remove());
-  form.querySelectorAll('.fg__input--err').forEach(e => e.classList.remove('fg__input--err'));
+  form.querySelectorAll('.fg__input').forEach(f => {
+    f.classList.remove('is-valid','is-invalid');
+    f.style.borderColor = '';
+  });
   let ok = true;
   form.querySelectorAll('[required]').forEach(f => {
     if (!f.value.trim()) {
-      f.classList.add('fg__input--err');
-      f.style.borderColor = '#c0392b';
+      f.classList.add('is-invalid');
       const err = Object.assign(document.createElement('span'), {
         className: 'fg__err',
-        textContent: 'Required.',
-        style: 'display:block;font-size:.72rem;color:#c0392b;margin-top:.2rem;'
+        textContent: 'This field is required.',
       });
+      err.style.cssText = 'display:block;font-size:.72rem;color:#c0392b;margin-top:.25rem;';
       f.insertAdjacentElement('afterend', err);
       if (ok) f.focus();
       ok = false;
+    } else {
+      f.classList.add('is-valid');
     }
   });
   return ok;
 }
 
-/* Enquiry form */
+/* Live validation feedback on blur */
+document.querySelectorAll('.fg__input[required]').forEach(input => {
+  input.addEventListener('blur', () => {
+    input.classList.remove('is-valid','is-invalid');
+    if (input.value.trim()) {
+      input.classList.add('is-valid');
+    } else {
+      input.classList.add('is-invalid');
+    }
+  });
+  input.addEventListener('input', () => {
+    if (input.value.trim()) {
+      input.classList.remove('is-invalid');
+      input.classList.add('is-valid');
+    }
+  });
+});
+
 document.getElementById('enquiry-form')?.addEventListener('submit', e => {
   e.preventDefault();
   if (!validate(e.target)) return;
@@ -218,7 +272,6 @@ document.getElementById('enquiry-form')?.addEventListener('submit', e => {
   window.open(waUrl(lines.join('\n')), '_blank', 'noopener');
 });
 
-/* Book form */
 document.getElementById('book-form')?.addEventListener('submit', e => {
   e.preventDefault();
   if (!validate(e.target)) return;
@@ -234,7 +287,6 @@ document.getElementById('book-form')?.addEventListener('submit', e => {
   closeModal('modal-book');
 });
 
-/* Visa form */
 document.getElementById('visa-form')?.addEventListener('submit', e => {
   e.preventDefault();
   if (!validate(e.target)) return;
@@ -251,6 +303,42 @@ document.getElementById('visa-form')?.addEventListener('submit', e => {
 });
 
 /* =============================================
+   ANIMATED COUNTERS
+   ============================================= */
+function animateCounter(el) {
+  const target = parseFloat(el.dataset.target);
+  const isDecimal = target % 1 !== 0;
+  const duration = 1800;
+  const start = performance.now();
+
+  function step(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // ease-out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = eased * target;
+    el.textContent = isDecimal ? value.toFixed(1) : Math.floor(value);
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = isDecimal ? target.toFixed(1) : target;
+  }
+  requestAnimationFrame(step);
+}
+
+const statNums = document.querySelectorAll('.stat-item__num');
+if ('IntersectionObserver' in window && statNums.length) {
+  const statsObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        statNums.forEach(el => animateCounter(el));
+        statsObs.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+  const statsSection = document.querySelector('.stats');
+  if (statsSection) statsObs.observe(statsSection);
+}
+
+/* =============================================
    REVIEW SLIDER
    ============================================= */
 const slides = [...document.querySelectorAll('.review-slide')];
@@ -258,9 +346,7 @@ const dots   = [...document.querySelectorAll('.review-dot')];
 let current  = 0, autoTimer;
 
 function showSlide(idx) {
-  slides.forEach((s, i) => {
-    s.classList.toggle('active', i === idx);
-  });
+  slides.forEach((s, i) => s.classList.toggle('active', i === idx));
   dots.forEach((d, i) => {
     d.classList.toggle('active', i === idx);
     d.setAttribute('aria-selected', String(i === idx));
@@ -281,8 +367,7 @@ if (slides.length > 1) {
 }
 
 /* =============================================
-   GALLERY ARROWS (decorative — grid doesn't scroll,
-   arrows cycle highlight)
+   GALLERY ARROWS
    ============================================= */
 const galPrev  = document.getElementById('gal-prev');
 const galNext  = document.getElementById('gal-next');
@@ -291,8 +376,9 @@ let galIdx = 0;
 
 function highlightGal(idx) {
   galItems.forEach((el, i) => {
-    el.style.opacity  = i === idx ? '1' : '0.65';
-    el.style.transform = i === idx ? 'scale(1.08)' : '';
+    el.style.opacity   = i === idx ? '1' : '0.6';
+    el.style.transform = i === idx ? 'scale(1.1)' : '';
+    el.style.outline   = i === idx ? `2px solid var(--orange)` : '';
   });
   galIdx = idx;
 }
@@ -301,32 +387,26 @@ galPrev?.addEventListener('click', () => highlightGal((galIdx - 1 + galItems.len
 galNext?.addEventListener('click', () => highlightGal((galIdx + 1) % galItems.length));
 
 /* =============================================
-   SCROLL FADE-IN ANIMATIONS
+   SCROLL REVEAL ANIMATIONS
    ============================================= */
 if ('IntersectionObserver' in window) {
-  const style = document.createElement('style');
-  style.textContent = `
-    .fade-up { opacity:0; transform:translateY(22px); transition: opacity .5s ease, transform .5s ease; }
-    .fade-up.visible { opacity:1; transform:none; }
-  `;
-  document.head.appendChild(style);
+  const revealTargets = document.querySelectorAll(
+    '.dest-card, .pkg-card, .svc-card, .why-item, .stat-item, .contact__form-wrap, .contact__info'
+  );
 
-  document.querySelectorAll(
-    '.dest-card,.pkg-card,.svc-card,.why-item,.review-slide.active,.gallery-strip__item'
-  ).forEach((el, i) => {
-    el.classList.add('fade-up');
-    el.style.transitionDelay = `${(i % 5) * 65}ms`;
+  revealTargets.forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = `${(i % 4) * 70}ms`;
   });
 
-  new IntersectionObserver(entries => {
-    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); } });
-  }, { threshold: 0.12 }).observe(...(document.querySelectorAll('.fade-up').length
-    ? [document.querySelectorAll('.fade-up')[0]]
-    : [document.body]));
-
-  // Re-observe all
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => { if (en.isIntersecting) en.target.classList.add('visible'); });
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObs.unobserve(entry.target);
+      }
+    });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+  revealTargets.forEach(el => revealObs.observe(el));
 }
