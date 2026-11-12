@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book a Tour — Shallom Uganda Tours and Travels. Complete your booking request and receive a confirmation from our team." />
+  <title>Book a Tour — Shallom Uganda Tours and Travels</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/booking.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body class="loaded">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a href="tel:+256772123456" class="topbar__item">
+          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.56 21 3 13.44 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.01L6.6 10.8z"/></svg>
+          +256 772 123 456
+        </a>
+        <a href="mailto:info@shallomugandatours.com" class="topbar__item">
+          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          info@shallomugandatours.com
+        </a>
+        <span class="topbar__item">
+          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Kampala, Uganda
+        </span>
+      </div>
+      <div class="topbar__right">
+        <a href="#" class="topbar__social" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" class="topbar__social" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg></a>
+        <a href="#" class="topbar__social" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a4731"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Shallom Uganda Tours — home">
+        <div class="logo__icon" aria-hidden="true">
+          <svg viewBox="0 0 60 50" width="60" height="50">
+            <circle cx="30" cy="12" r="8" fill="#f7a800"/>
+            <polygon points="10,42 25,18 40,42" fill="#2d6a4f"/>
+            <polygon points="22,42 35,22 50,42" fill="#1a4731"/>
+            <polygon points="35,22 40.5,32 29.5,32" fill="#fff" opacity=".9"/>
+            <rect x="5" y="42" width="50" height="4" rx="2" fill="#f7a800"/>
+          </svg>
+        </div>
+        <div class="logo__text">
+          <span class="logo__name">Shallom Uganda</span>
+          <span class="logo__sub">Tours and Travels</span>
+          <span class="logo__tag">...Explore, Discover, Experience...</span>
+        </div>
+      </a>
+      <nav class="bk-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Book a Tour</span>
+      </nav>
+      <div class="header__cta">
+        <a href="https://wa.me/256772123456?text=Hello%2C%20I%27d%20like%20to%20book%20a%20tour." target="_blank" rel="noopener noreferrer" class="btn btn--wa">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.838.493 3.562 1.355 5.055L2 22l5.079-1.33A9.943 9.943 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 11.998 2z"/></svg>
+          WhatsApp Us
+        </a>
+        <a href="index.html" class="btn btn--book">← Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="bk-hero" aria-labelledby="bk-hero-title">
+      <div class="bk-hero__bg" aria-hidden="true"></div>
+      <div class="bk-hero__overlay" aria-hidden="true"></div>
+      <div class="container bk-hero__content">
+        <div class="bk-hero__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+        </div>
+        <h1 id="bk-hero-title" class="bk-hero__title">Book Your <span>Dream Tour</span></h1>
+        <p class="bk-hero__sub">Fill in your details below and our team will prepare a personalised booking confirmation and itinerary for you within 24 hours.</p>
+        <div class="bk-hero__steps" aria-label="Booking process">
+          <div class="bk-hero__step">
+            <span class="bk-hero__step-num">1</span>
+            <span>Complete the form</span>
+          </div>
+          <span class="bk-hero__step-sep" aria-hidden="true">→</span>
+          <div class="bk-hero__step">
+            <span class="bk-hero__step-num">2</span>
+            <span>We confirm &amp; quote</span>
+          </div>
+          <span class="bk-hero__step-sep" aria-hidden="true">→</span>
+          <div class="bk-hero__step">
+            <span class="bk-hero__step-num">3</span>
+            <span>Pay deposit &amp; go!</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MAIN BOOKING LAYOUT
+    ============================================================ -->
+    <section class="bk-main" aria-label="Booking form and information">
+      <div class="container bk-layout">
+
+        <!-- ===== LEFT: FORM ===== -->
+        <div class="bk-form-wrap">
+          <form class="bk-form" id="booking-form" novalidate>
+
+            <!-- Progress bar -->
+            <div class="bk-progress" aria-label="Form progress">
+              <div class="bk-progress__bar" id="bk-progress-bar" style="width:0%"></div>
+            </div>
+
+            <!-- STEP 1: Choose your tour -->
+            <fieldset class="bk-step" id="bk-step-1" data-step="1">
+              <legend class="bk-step__legend">
+                <span class="bk-step__num">1</span>
+                Choose Your Tour
+              </legend>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-package">Tour Package <span class="fg__req">*</span></label>
+                <select class="fg__input" id="bk-package" name="package" required>
+                  <option value="">Select a package</option>
+                  <optgroup label="Uganda Safaris">
+                    <option value="Gorilla Trekking Adventure — 3 Days Bwindi">🦍 Gorilla Trekking Adventure (3 Days)</option>
+                    <option value="Classic Safari Experience — 5 Days Queen Elizabeth NP">🐘 Classic Safari Experience (5 Days)</option>
+                    <option value="Murchison Falls Safari — 4 Days">🌊 Murchison Falls Safari (4 Days)</option>
+                    <option value="Chimpanzee Tracking — Kibale Forest">🐒 Chimpanzee Tracking — Kibale Forest</option>
+                    <option value="Uganda Big Five Safari — 7 Days">🦁 Uganda Big Five Safari (7 Days)</option>
+                  </optgroup>
+                  <optgroup label="Beach & Island">
+                    <option value="Zanzibar Beach Holiday — 7 Days">🏖️ Zanzibar Beach Holiday (7 Days)</option>
+                    <option value="Lake Bunyonyi Retreat — 3 Days">🛶 Lake Bunyonyi Retreat (3 Days)</option>
+                  </optgroup>
+                  <optgroup label="Combined Packages">
+                    <option value="Gorilla & Safari Combo — 7 Days">🦍🐘 Gorilla &amp; Safari Combo (7 Days)</option>
+                    <option value="Uganda & Rwanda Gorilla Safari — 6 Days">🌍 Uganda &amp; Rwanda Gorilla Safari (6 Days)</option>
+                  </optgroup>
+                  <option value="Custom Trip — I'll describe below">✏️ Custom Trip (describe below)</option>
+                </select>
+              </div>
+
+              <div class="fg fg--row">
+                <div class="fg">
+                  <label class="fg__label" for="bk-start">Start Date <span class="fg__req">*</span></label>
+                  <input class="fg__input" id="bk-start" name="start_date" type="date" required />
+                </div>
+                <div class="fg">
+                  <label class="fg__label" for="bk-end">End Date</label>
+                  <input class="fg__input" id="bk-end" name="end_date" type="date" />
+                </div>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-flexibility">Date Flexibility</label>
+                <select class="fg__input" id="bk-flexibility" name="flexibility">
+                  <option value="Fixed dates">Fixed dates — cannot change</option>
+                  <option value="Flexible ±3 days">Flexible ± 3 days</option>
+                  <option value="Flexible ±1 week">Flexible ± 1 week</option>
+                  <option value="Very flexible">Very flexible — open to suggestions</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <!-- STEP 2: Travellers -->
+            <fieldset class="bk-step" id="bk-step-2" data-step="2">
+              <legend class="bk-step__legend">
+                <span class="bk-step__num">2</span>
+                Travellers
+              </legend>
+
+              <div class="bk-travellers-row">
+                <div class="fg">
+                  <label class="fg__label" for="bk-adults">Adults (18+) <span class="fg__req">*</span></label>
+                  <input class="fg__input" id="bk-adults" name="adults" type="number" min="1" max="50" value="1" required />
+                </div>
+                <div class="fg">
+                  <label class="fg__label" for="bk-children">Children (under 18)</label>
+                  <input class="fg__input" id="bk-children" name="children" type="number" min="0" max="20" value="0" />
+                </div>
+                <div class="fg">
+                  <label class="fg__label" for="bk-group-type">Group Type</label>
+                  <select class="fg__input" id="bk-group-type" name="group_type">
+                    <option value="Solo traveller">Solo traveller</option>
+                    <option value="Couple">Couple</option>
+                    <option value="Family">Family</option>
+                    <option value="Friends group">Friends group</option>
+                    <option value="Corporate / Organisation">Corporate / Organisation</option>
+                    <option value="Honeymoon">Honeymoon</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-nationality">Nationality of Travellers <span class="fg__req">*</span></label>
+                <input class="fg__input" id="bk-nationality" name="nationality" type="text" placeholder="e.g. American, British, Ugandan…" required />
+              </div>
+            </fieldset>
+
+            <!-- STEP 3: Personal Details -->
+            <fieldset class="bk-step" id="bk-step-3" data-step="3">
+              <legend class="bk-step__legend">
+                <span class="bk-step__num">3</span>
+                Your Details
+              </legend>
+
+              <div class="fg fg--row">
+                <div class="fg">
+                  <label class="fg__label" for="bk-fname">First Name <span class="fg__req">*</span></label>
+                  <input class="fg__input" id="bk-fname" name="first_name" type="text" placeholder="Jane" autocomplete="given-name" required />
+                </div>
+                <div class="fg">
+                  <label class="fg__label" for="bk-lname">Last Name <span class="fg__req">*</span></label>
+                  <input class="fg__input" id="bk-lname" name="last_name" type="text" placeholder="Doe" autocomplete="family-name" required />
+                </div>
+              </div>
+
+              <div class="fg fg--row">
+                <div class="fg">
+                  <label class="fg__label" for="bk-email">Email Address <span class="fg__req">*</span></label>
+                  <input class="fg__input" id="bk-email" name="email" type="email" placeholder="jane@example.com" autocomplete="email" required />
+                </div>
+                <div class="fg">
+                  <label class="fg__label" for="bk-phone">Phone / WhatsApp <span class="fg__req">*</span></label>
+                  <input class="fg__input" id="bk-phone" name="phone" type="tel" placeholder="+256 700 000 000" autocomplete="tel" required />
+                </div>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-country">Country of Residence <span class="fg__req">*</span></label>
+                <input class="fg__input" id="bk-country" name="country" type="text" placeholder="e.g. Uganda, United Kingdom, USA…" autocomplete="country-name" required />
+              </div>
+            </fieldset>
+
+            <!-- STEP 4: Preferences & Accommodation -->
+            <fieldset class="bk-step" id="bk-step-4" data-step="4">
+              <legend class="bk-step__legend">
+                <span class="bk-step__num">4</span>
+                Preferences &amp; Accommodation
+              </legend>
+
+              <div class="fg fg--row">
+                <div class="fg">
+                  <label class="fg__label" for="bk-accom">Accommodation Type</label>
+                  <select class="fg__input" id="bk-accom" name="accommodation">
+                    <option value="Budget (guesthouses / campsites)">Budget — guesthouses / campsites</option>
+                    <option value="Mid-range (3-star lodges)">Mid-range — 3-star lodges</option>
+                    <option value="Comfort (4-star lodges)" selected>Comfort — 4-star lodges</option>
+                    <option value="Luxury (5-star / premium lodges)">Luxury — 5-star / premium lodges</option>
+                    <option value="Mixed">Mixed / flexible</option>
+                  </select>
+                </div>
+                <div class="fg">
+                  <label class="fg__label" for="bk-room">Room Preference</label>
+                  <select class="fg__input" id="bk-room" name="room_type">
+                    <option value="Single rooms">Single rooms</option>
+                    <option value="Double / Twin rooms">Double / Twin rooms</option>
+                    <option value="Family rooms">Family rooms</option>
+                    <option value="Mix — to be advised">Mix — to be advised</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-transport">Transport Preference</label>
+                <select class="fg__input" id="bk-transport" name="transport">
+                  <option value="Private vehicle (recommended)">Private vehicle — recommended</option>
+                  <option value="Shared shuttle / group vehicle">Shared shuttle / group vehicle</option>
+                  <option value="Self-drive (car hire)">Self-drive (car hire)</option>
+                  <option value="Domestic flights included">Include domestic flights where possible</option>
+                </select>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label">Dietary Requirements</label>
+                <div class="bk-checkgroup">
+                  <label class="bk-check"><input type="checkbox" name="dietary" value="Vegetarian" /> Vegetarian</label>
+                  <label class="bk-check"><input type="checkbox" name="dietary" value="Vegan" /> Vegan</label>
+                  <label class="bk-check"><input type="checkbox" name="dietary" value="Halal" /> Halal</label>
+                  <label class="bk-check"><input type="checkbox" name="dietary" value="Kosher" /> Kosher</label>
+                  <label class="bk-check"><input type="checkbox" name="dietary" value="Gluten-free" /> Gluten-free</label>
+                  <label class="bk-check"><input type="checkbox" name="dietary" value="No restrictions" checked /> No restrictions</label>
+                </div>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label">Add-on Services</label>
+                <div class="bk-checkgroup">
+                  <label class="bk-check"><input type="checkbox" name="addons" value="Airport pickup &amp; drop-off" /> Airport pickup &amp; drop-off</label>
+                  <label class="bk-check"><input type="checkbox" name="addons" value="Flight booking assistance" /> Flight booking assistance</label>
+                  <label class="bk-check"><input type="checkbox" name="addons" value="Visa assistance" /> Visa assistance</label>
+                  <label class="bk-check"><input type="checkbox" name="addons" value="Travel insurance guidance" /> Travel insurance guidance</label>
+                  <label class="bk-check"><input type="checkbox" name="addons" value="Photography guide" /> Photography guide</label>
+                  <label class="bk-check"><input type="checkbox" name="addons" value="Porter / luggage assistance" /> Porter / luggage assistance</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- STEP 5: Health & Special Needs -->
+            <fieldset class="bk-step" id="bk-step-5" data-step="5">
+              <legend class="bk-step__legend">
+                <span class="bk-step__num">5</span>
+                Health &amp; Special Requirements
+              </legend>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-health">Medical Conditions or Disabilities</label>
+                <textarea class="fg__input fg__textarea" id="bk-health" name="health" rows="3" placeholder="e.g. difficulty walking long distances, altitude sensitivity, allergies, medication needs… Leave blank if none."></textarea>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-fitness">Physical Fitness Level</label>
+                <select class="fg__input" id="bk-fitness" name="fitness">
+                  <option value="Low — gentle walks only">Low — gentle walks only</option>
+                  <option value="Moderate — can walk 2–4 hrs" selected>Moderate — can walk 2–4 hours</option>
+                  <option value="Good — comfortable with full-day hikes">Good — comfortable with full-day hikes</option>
+                  <option value="High — experienced hiker / trekker">High — experienced hiker / trekker</option>
+                </select>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-special">Other Special Requests</label>
+                <textarea class="fg__input fg__textarea" id="bk-special" name="special_requests" rows="3" placeholder="Anniversary celebrations, surprise arrangements, specific sites you want to visit, budget range, anything else…"></textarea>
+              </div>
+
+              <div class="fg">
+                <label class="fg__label" for="bk-hear">How did you hear about us?</label>
+                <select class="fg__input" id="bk-hear" name="how_heard">
+                  <option value="">Select an option</option>
+                  <option value="Google search">Google search</option>
+                  <option value="Social media (Facebook / Instagram)">Social media (Facebook / Instagram)</option>
+                  <option value="Friend or family referral">Friend or family referral</option>
+                  <option value="Travel agent">Travel agent</option>
+                  <option value="Repeat client">Repeat client</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <!-- STEP 6: Terms & Confirmation -->
+            <fieldset class="bk-step" id="bk-step-6" data-step="6">
+              <legend class="bk-step__legend">
+                <span class="bk-step__num">6</span>
+                Confirm &amp; Submit
+              </legend>
+
+              <!-- Summary box (filled by JS) -->
+              <div class="bk-summary" id="bk-summary" aria-label="Booking summary">
+                <h3 class="bk-summary__title">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Your Booking Summary
+                </h3>
+                <div class="bk-summary__grid" id="bk-summary-grid">
+                  <!-- populated by JS -->
+                </div>
+              </div>
+
+              <div class="bk-terms-checks">
+                <label class="bk-check bk-check--terms">
+                  <input type="checkbox" id="bk-terms" name="terms" required />
+                  <span>I have read and agree to the <a href="terms.html" target="_blank">Terms &amp; Conditions</a>, including the cancellation and payment policy. <span class="fg__req">*</span></span>
+                </label>
+                <label class="bk-check bk-check--terms">
+                  <input type="checkbox" id="bk-privacy" name="privacy" required />
+                  <span>I consent to Shallom Uganda Tours and Travels processing my personal data to handle this booking, in accordance with the <a href="privacy.html" target="_blank">Privacy Policy</a>. <span class="fg__req">*</span></span>
+                </label>
+                <label class="bk-check bk-check--terms">
+                  <input type="checkbox" id="bk-accurate" name="accurate" required />
+                  <span>I confirm that all information provided is accurate and complete. <span class="fg__req">*</span></span>
+                </label>
+              </div>
+
+              <div class="bk-whatsapp-note">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.838.493 3.562 1.355 5.055L2 22l5.079-1.33A9.943 9.943 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 11.998 2z"/></svg>
+                <p>Your booking request will be sent to our team via WhatsApp. We will reply within <strong>24 hours</strong> with a full quote and itinerary.</p>
+              </div>
+
+              <button type="submit" class="btn btn--book btn--full bk-submit-btn">
+                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.838.493 3.562 1.355 5.055L2 22l5.079-1.33A9.943 9.943 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 11.998 2z"/></svg>
+                Send Booking Request via WhatsApp
+              </button>
+
+            </fieldset>
+
+          </form>
+        </div>
+
+        <!-- ===== RIGHT: SIDEBAR ===== -->
+        <aside class="bk-sidebar" aria-label="Booking information">
+
+          <!-- Why book with us -->
+          <div class="bk-sidebar__card">
+            <h3 class="bk-sidebar__title">Why Book With Us</h3>
+            <ul class="bk-why-list">
+              <li>
+                <span class="bk-why-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></span>
+                <div><strong>Trusted &amp; Licensed</strong><p>Registered tour operator with years of experience in Uganda and East Africa.</p></div>
+              </li>
+              <li>
+                <span class="bk-why-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></span>
+                <div><strong>Tailored Itineraries</strong><p>Every trip is customised to your dates, budget and interests — not a one-size-fits-all package.</p></div>
+              </li>
+              <li>
+                <span class="bk-why-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></span>
+                <div><strong>24-Hour Response</strong><p>We respond to all booking requests within 24 hours with a full quote and itinerary.</p></div>
+              </li>
+              <li>
+                <span class="bk-why-list__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 6l-7 11z"/></svg></span>
+                <div><strong>No Hidden Fees</strong><p>All costs are clearly outlined in your booking confirmation before any payment is required.</p></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Payment info -->
+          <div class="bk-sidebar__card bk-sidebar__card--payment">
+            <h3 class="bk-sidebar__title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+              Payment Summary
+            </h3>
+            <div class="bk-payment-info">
+              <div class="bk-payment-row">
+                <span>Deposit required</span>
+                <span class="bk-payment-val">30% of total</span>
+              </div>
+              <div class="bk-payment-row">
+                <span>Balance due</span>
+                <span class="bk-payment-val">30 days before departure</span>
+              </div>
+              <div class="bk-payment-row">
+                <span>Accepted methods</span>
+                <span class="bk-payment-val">Bank transfer · Mobile money</span>
+              </div>
+              <div class="bk-payment-row">
+                <span>Currency</span>
+                <span class="bk-payment-val">USD / UGX</span>
+              </div>
+            </div>
+            <p class="bk-payment-note">Pricing will be confirmed in your booking quote. No payment is required at this stage.</p>
+          </div>
+
+          <!-- Contact -->
+          <div class="bk-sidebar__card bk-sidebar__card--contact">
+            <h3 class="bk-sidebar__title">Need Help?</h3>
+            <p class="bk-sidebar__text">Our team is available to help you plan your perfect trip.</p>
+            <div class="bk-contact-list">
+              <a href="tel:+256772123456" class="bk-contact-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.56 21 3 13.44 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.01L6.6 10.8z"/></svg>
+                +256 772 123 456
+              </a>
+              <a href="mailto:info@shallomugandatours.com" class="bk-contact-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                info@shallomugandatours.com
+              </a>
+              <a href="https://wa.me/256772123456?text=Hello%2C%20I%20need%20help%20with%20my%20booking." target="_blank" rel="noopener noreferrer" class="bk-contact-item bk-contact-item--wa">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.838.493 3.562 1.355 5.055L2 22l5.079-1.33A9.943 9.943 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 11.998 2z"/></svg>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Cancellation summary -->
+          <div class="bk-sidebar__card">
+            <h3 class="bk-sidebar__title">Cancellation Policy</h3>
+            <div class="bk-cancel-list">
+              <div class="bk-cancel-row"><span>60+ days before</span><span class="bk-cancel-fee bk-cancel-fee--low">Deposit only</span></div>
+              <div class="bk-cancel-row"><span>31–60 days</span><span class="bk-cancel-fee bk-cancel-fee--med">50%</span></div>
+              <div class="bk-cancel-row"><span>15–30 days</span><span class="bk-cancel-fee bk-cancel-fee--high">75%</span></div>
+              <div class="bk-cancel-row"><span>Under 14 days</span><span class="bk-cancel-fee bk-cancel-fee--full">90–100%</span></div>
+            </div>
+            <a href="terms.html" class="bk-sidebar__more">Full cancellation policy →</a>
+          </div>
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SUCCESS STATE (shown after submission)
+    ============================================================ -->
+    <section class="bk-success" id="bk-success" hidden aria-live="polite">
+      <div class="container bk-success__inner">
+        <div class="bk-success__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </div>
+        <h2 class="bk-success__title">Booking Request Sent!</h2>
+        <p class="bk-success__msg">Your booking request has been sent to our team via WhatsApp. We will review your details and get back to you within <strong>24 hours</strong> with a full quote and personalised itinerary.</p>
+
+        <div class="bk-success__ref">
+          <span>Reference number:</span>
+          <strong id="bk-ref-num">—</strong>
+        </div>
+
+        <div class="bk-success__next">
+          <h3>What happens next?</h3>
+          <ol>
+            <li>Our team reviews your booking request and checks availability.</li>
+            <li>We send you a personalised itinerary and pricing via WhatsApp or email.</li>
+            <li>You confirm the itinerary and pay the 30% deposit to secure your dates.</li>
+            <li>We issue your official booking confirmation document.</li>
+            <li>Balance payment is due 30 days before departure.</li>
+          </ol>
+        </div>
+
+        <div class="bk-success__actions">
+          <a href="index.html" class="btn btn--book">Back to Home</a>
+          <a href="https://wa.me/256772123456" target="_blank" rel="noopener noreferrer" class="btn btn--wa">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.838.493 3.562 1.355 5.055L2 22l5.079-1.33A9.943 9.943 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 11.998 2z"/></svg>
+            Follow up on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="logo__icon logo__icon--sm" aria-hidden="true">
+              <svg viewBox="0 0 60 50" width="48" height="40">
+                <circle cx="30" cy="12" r="8" fill="#f7a800"/>
+                <polygon points="10,42 25,18 40,42" fill="#4a9e6e"/>
+                <polygon points="22,42 35,22 50,42" fill="#2d7a50"/>
+                <polygon points="35,22 40.5,32 29.5,32" fill="#fff" opacity=".9"/>
+                <rect x="5" y="42" width="50" height="4" rx="2" fill="#f7a800"/>
+              </svg>
+            </div>
+            <div>
+              <span class="logo__name">Shallom Uganda</span><br/>
+              <span class="logo__sub">Tours and Travels</span>
+            </div>
+          </div>
+          <p class="footer__tagline"><em>Travel More… Create Memories…</em></p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contact Us</h4>
+          <a href="tel:+256772123456" class="footer__link">+256 772 123 456</a>
+          <a href="mailto:info@shallomugandatours.com" class="footer__link">info@shallomugandatours.com</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="index.html#packages" class="footer__link">Tour Packages</a>
+          <a href="visa.html" class="footer__link">Visa Assistance</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Legal</h4>
+          <a href="terms.html" class="footer__link">Terms &amp; Conditions</a>
+          <a href="privacy.html" class="footer__link">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; <span id="footer-year"></span> Shallom Uganda Tours and Travels. All Rights Reserved.</p>
+        <nav aria-label="Legal">
+          <a href="terms.html" class="footer__legal-link">Terms &amp; Conditions</a>
+          <span aria-hidden="true">|</span>
+          <a href="privacy.html" class="footer__legal-link">Privacy Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/256772123456?text=Hello%2C%20I%27d%20like%20to%20book%20a%20tour." target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.477 2 12c0 1.838.493 3.562 1.355 5.055L2 22l5.079-1.33A9.943 9.943 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 11.998 2z"/></svg>
+    <span class="wa-float__tooltip">Book a tour</span>
+  </a>
+
+  <script src="js/booking.js"></script>
+</body>
+</html>
