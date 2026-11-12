@@ -289,3 +289,86 @@
   .legal-section__title { font-size: 1.1rem; }
   .legal-footer-note { flex-direction: column; align-items: flex-start; }
 }
+
+/* =============================================
+   PRIVACY PAGE — extra components
+   ============================================= */
+
+/* Purpose grid */
+.privacy-purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: .9rem;
+  margin-block: 1rem;
+}
+
+.privacy-purpose {
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  background: var(--off-white);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  transition: box-shadow var(--t);
+}
+.privacy-purpose:hover { box-shadow: var(--shadow-sm); }
+
+.privacy-purpose__icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  min-width: 2.2rem;
+  border-radius: 50%;
+  background: rgba(26,71,49,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-dark);
+}
+.privacy-purpose__icon svg { width: 1rem; height: 1rem; }
+
+.privacy-purpose strong {
+  display: block;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .2rem;
+}
+.privacy-purpose p {
+  font-size: .8rem !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 0 !important;
+  line-height: 1.55 !important;
+}
+
+/* Rights grid */
+.privacy-rights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: .75rem;
+  margin-block: 1rem;
+}
+
+.privacy-right {
+  background: var(--off-white);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--orange);
+}
+
+.privacy-right__label {
+  display: block;
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--orange);
+  margin-bottom: .4rem;
+}
+.privacy-right p {
+  font-size: .8rem !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 0 !important;
+  line-height: 1.55 !important;
+}
