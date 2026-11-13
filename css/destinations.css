@@ -389,3 +389,76 @@
   .svc-full-card { grid-template-columns: 1fr; }
   .svc-full-card__list-grid { grid-template-columns: 1fr; }
 }
+
+/* =============================================
+   MOBILE IMPROVEMENTS — destinations.css
+   ============================================= */
+
+@media (max-width: 768px) {
+  /* Page hero — shorter on mobile */
+  .page-hero { min-height: 38vh; padding-bottom: 2rem; }
+  .page-hero__title { font-size: clamp(1.6rem,7vw,2.4rem); }
+  .page-hero__sub   { font-size: .82rem; }
+
+  /* Pill nav — scrollable row */
+  .dest-nav-pills {
+    flex-wrap: nowrap; overflow-x: auto;
+    justify-content: flex-start; padding-inline: 1rem;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    gap: .5rem;
+  }
+  .dest-nav-pills::-webkit-scrollbar { display: none; }
+  .dest-pill { flex-shrink: 0; }
+
+  /* Destination sections */
+  .dest-section { padding-block: 2.5rem; }
+  .dest-layout,
+  .dest-layout--reverse { grid-template-columns: 1fr; gap: 1.5rem; }
+  .dest-layout--reverse .dest-layout__media,
+  .dest-layout--reverse .dest-layout__content { order: unset; }
+  .dest-layout__img { max-height: 280px; }
+  .dest-info-grid   { grid-template-columns: 1fr; gap: .75rem; }
+  .dest-cta         { flex-direction: column; }
+  .dest-cta .btn    { text-align: center; justify-content: center; }
+  .dest-gallery-row { flex-direction: column; }
+  .dest-gallery-row img { height: 180px; }
+
+  /* Package pages */
+  .pkg-full { padding-block: 2.5rem; }
+  .pkg-full__header { grid-template-columns: 1fr; gap: 1.5rem; }
+  .pkg-full__hero-img { max-height: 240px; }
+  .pkg-full__body   { grid-template-columns: 1fr; }
+  .pkg-incl-box     { position: static; }
+  .itinerary__day   { grid-template-columns: 3rem 1fr; gap: .5rem; }
+  .pkg-combo__grid  { grid-template-columns: 1fr 1fr; }
+
+  /* Services */
+  .svc-full-card { grid-template-columns: 1fr; gap: 1rem; padding: 1.5rem 0; }
+  .svc-full-card--alt { padding: 1.5rem 1rem; }
+  .svc-full-card__list-grid { grid-template-columns: 1fr; }
+
+  /* Gallery page */
+  .gal-grid { grid-template-columns: repeat(2,1fr); gap: .5rem; }
+  .gal-item img { height: 150px; }
+
+  /* Contact page */
+  .contact-page { padding-block: 2.5rem; }
+  .contact-page__inner { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-alt-cta { flex-direction: column; }
+  .contact-map iframe { height: 240px; }
+
+  /* CTA banner */
+  .page-cta { padding-block: 3.5rem; }
+  .page-cta__actions { flex-direction: column; align-items: center; gap: .6rem; }
+  .page-cta__actions .btn { width: 100%; max-width: 300px; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .pkg-combo__grid { grid-template-columns: 1fr; }
+  .pkg-full__tags  { gap: .3rem; }
+  .pkg-tag         { font-size: .68rem; }
+  .gal-grid        { grid-template-columns: repeat(2,1fr); }
+  .contact-cards   { gap: .5rem; }
+  .contact-card    { padding: .7rem .75rem; }
+  .contact-social__links { gap: .4rem; }
+}
