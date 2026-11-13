@@ -223,7 +223,7 @@ img { display: block; max-width: 100%; }
       rgba(26,71,49,.55) 35%,
       rgba(26,71,49,.20) 65%,
       rgba(26,71,49,.10) 100%),
-    url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Murchison_falls_National_Park.2.jpg');
+    url('../images/murchison-park.jpg');
   background-size: cover; background-position: center;
 }
 .hero__overlay { position: absolute; inset: 0; background: rgba(0,0,0,.12); pointer-events: none; }
@@ -343,11 +343,11 @@ section { padding-block: 3.5rem; }
 .dest-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 
 /* Destination card images — Wikimedia Commons (freely licensed) */
-.dest-card--murchison  { background: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Murchison_Falls_-_by_Boschlech.jpg') center/cover; }
-.dest-card--bwindi     { background: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/Bwindi_Impenetrable_National_Park-112393.jpg') center/cover; }
-.dest-card--queen      { background: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg') center/cover; }
-.dest-card--bunyonyi   { background: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Lake_Bunyonyi_%288146148093%29.jpg') center/cover; }
-.dest-card--zanzibar   { background: url('https://upload.wikimedia.org/wikipedia/commons/8/89/Pongwe_Beach_Zanzibar.jpg') center/cover; }
+.dest-card--murchison  { background: url('../images/murchison-falls.jpg') center/cover; }
+.dest-card--bwindi     { background: url('../images/bwindi-forest.jpg') center/cover; }
+.dest-card--queen      { background: url('../images/kazinga-hippos.jpg') center/cover; }
+.dest-card--bunyonyi   { background: url('../images/lake-bunyonyi.jpg') center/cover; }
+.dest-card--zanzibar   { background: url('../images/zanzibar-pongwe.jpg') center/cover; }
 
 .dest-card__overlay {
   position: absolute; inset: 0;
@@ -391,10 +391,10 @@ section { padding-block: 3.5rem; }
 
 /* Package images — Wikimedia Commons (freely licensed) */
 .pkg-card__img { height: 185px; background-size: cover; background-position: center; }
-.pkg-card__img--gorilla   { background: url('https://upload.wikimedia.org/wikipedia/commons/8/85/Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg') center/cover; }
-.pkg-card__img--safari    { background: url('https://upload.wikimedia.org/wikipedia/commons/c/cd/Tree_lion_2.jpg') center/cover; }
-.pkg-card__img--murchison { background: url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Murchison_falls_National_Park.2.jpg') center/cover; }
-.pkg-card__img--zanzibar  { background: url('https://upload.wikimedia.org/wikipedia/commons/d/d6/Kendwa_Beach_%28Sunset_Kendwa_Hotel%29.JPG') center/cover; }
+.pkg-card__img--gorilla   { background: url('../images/gorilla.jpg') center/cover; }
+.pkg-card__img--safari    { background: url('../images/tree-lion.jpg') center/cover; }
+.pkg-card__img--murchison { background: url('../images/murchison-park.jpg') center/cover; }
+.pkg-card__img--zanzibar  { background: url('../images/zanzibar-kendwa.jpg') center/cover; }
 
 .pkg-card__body { padding: .9rem 1rem; display: flex; flex-direction: column; flex: 1; }
 .pkg-card__name { font-size: .95rem; font-weight: 700; color: var(--text); margin-bottom: .5rem; }
@@ -501,12 +501,12 @@ section { padding-block: 3.5rem; }
 .gallery-strip__item:hover { transform: scale(1.04); opacity: .9; }
 
 /* Gallery images — Wikimedia Commons (freely licensed) */
-.gallery-strip__item--1 { background: url('https://upload.wikimedia.org/wikipedia/commons/8/85/Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg') center/cover; }
-.gallery-strip__item--2 { background: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Murchison_Falls_-_by_Boschlech.jpg') center/cover; }
-.gallery-strip__item--3 { background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/African_elephant.jpg') center/cover; }
-.gallery-strip__item--4 { background: url('https://upload.wikimedia.org/wikipedia/commons/f/f7/Zanzibar_Sunset.jpg') center/cover; }
-.gallery-strip__item--5 { background: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Lake_Bunyonyi_%288146148093%29.jpg') center/cover; }
-.gallery-strip__item--6 { background: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg') center/cover; }
+.gallery-strip__item--1 { background: url('../images/gorilla.jpg') center/cover; }
+.gallery-strip__item--2 { background: url('../images/murchison-falls.jpg') center/cover; }
+.gallery-strip__item--3 { background: url('../images/elephant.jpg') center/cover; }
+.gallery-strip__item--4 { background: url('../images/zanzibar-sunset.jpg') center/cover; }
+.gallery-strip__item--5 { background: url('../images/lake-bunyonyi.jpg') center/cover; }
+.gallery-strip__item--6 { background: url('../images/kazinga-hippos.jpg') center/cover; }
 
 .gallery-strip__arrow {
   position: absolute; top: 50%; transform: translateY(-50%);

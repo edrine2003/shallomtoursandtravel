@@ -68,7 +68,7 @@
   position: absolute; inset: 0;
   background:
     linear-gradient(135deg, rgba(26,71,49,.92) 0%, rgba(26,71,49,.75) 50%, rgba(247,168,0,.3) 100%),
-    url('https://upload.wikimedia.org/wikipedia/commons/4/40/Bwindi_mountains.jpg');
+    url('../images/bwindi-mountains.jpg');
   background-size: cover; background-position: center;
 }
 .about-hero__overlay { position: absolute; inset: 0; background: rgba(0,0,0,.08); pointer-events: none; }
@@ -133,7 +133,7 @@
   top: 0; left: 0;
   width: 80%; height: 80%;
   border-radius: var(--radius-lg);
-  background: url('https://upload.wikimedia.org/wikipedia/commons/8/85/Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg') center/cover;
+  background: url('../images/gorilla.jpg') center/cover;
   box-shadow: var(--shadow-lg);
   overflow: hidden;
   display: flex; align-items: flex-end; padding: 1.25rem;
@@ -144,7 +144,7 @@
   bottom: 0; right: 0;
   width: 55%; height: 50%;
   border-radius: var(--radius-lg);
-  background: url('https://upload.wikimedia.org/wikipedia/commons/f/f1/Crater_lake_in_Queen_Elizabeth_National_Park.jpg') center/cover;
+  background: url('../images/crater-lake.jpg') center/cover;
   border: 4px solid var(--white);
   box-shadow: var(--shadow-md);
 }
@@ -404,7 +404,7 @@
   position: absolute; inset: 0;
   background:
     linear-gradient(135deg, rgba(26,71,49,.88) 0%, rgba(26,71,49,.7) 50%, rgba(247,168,0,.4) 100%),
-    url('https://upload.wikimedia.org/wikipedia/commons/a/af/Lake_Bunyonyi_%288146148093%29.jpg');
+    url('../images/lake-bunyonyi.jpg');
   background-size: cover; background-position: center;
 }
 .about-cta__overlay { position: absolute; inset: 0; background: rgba(0,0,0,.1); pointer-events: none; }

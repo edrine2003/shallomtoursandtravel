@@ -446,18 +446,18 @@ document.querySelectorAll('[data-dest-link]').forEach(link => {
    LIGHTBOX GALLERY
    ============================================= */
 const lightboxImages = [
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/8/85/Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg', label: 'Mountain gorilla — Bwindi Impenetrable Forest' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Murchison_Falls_-_by_Boschlech.jpg', label: 'Murchison Falls — the Nile River exploding through a narrow gorge' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/African_elephant.jpg', label: 'African elephant — Uganda wildlife' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Zanzibar_Sunset.jpg', label: 'Zanzibar sunset — Indian Ocean coastline' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Lake_Bunyonyi_%288146148093%29.jpg', label: 'Lake Bunyonyi — Place of Many Little Birds' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg', label: 'Hippos in the Kazinga Channel — Queen Elizabeth NP' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Tree_lion_2.jpg', label: 'Tree-climbing lion — Queen Elizabeth NP, Ishasha sector' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Bwindi_mountains.jpg', label: 'Bwindi mountains — misty rainforest landscape' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Kendwa_Beach_%28Sunset_Kendwa_Hotel%29.JPG', label: 'Kendwa Beach — Zanzibar' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Uganda-Kob.jpg', label: 'Uganda Kob — Queen Elizabeth NP' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Crater_lake_in_Queen_Elizabeth_National_Park.jpg', label: 'Crater lake — Queen Elizabeth NP' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Punishment_Island.jpg', label: 'Punishment Island — Lake Bunyonyi' },
+  { src: 'images/gorilla.jpg', label: 'Mountain gorilla — Bwindi Impenetrable Forest' },
+  { src: 'images/murchison-falls.jpg', label: 'Murchison Falls — the Nile River exploding through a narrow gorge' },
+  { src: 'images/elephant.jpg', label: 'African elephant — Uganda wildlife' },
+  { src: 'images/zanzibar-sunset.jpg', label: 'Zanzibar sunset — Indian Ocean coastline' },
+  { src: 'images/lake-bunyonyi.jpg', label: 'Lake Bunyonyi — Place of Many Little Birds' },
+  { src: 'images/kazinga-hippos.jpg', label: 'Hippos in the Kazinga Channel — Queen Elizabeth NP' },
+  { src: 'images/tree-lion.jpg', label: 'Tree-climbing lion — Queen Elizabeth NP, Ishasha sector' },
+  { src: 'images/bwindi-mountains.jpg', label: 'Bwindi mountains — misty rainforest landscape' },
+  { src: 'images/zanzibar-kendwa.jpg', label: 'Kendwa Beach — Zanzibar' },
+  { src: 'images/uganda-kob.jpg', label: 'Uganda Kob — Queen Elizabeth NP' },
+  { src: 'images/crater-lake.jpg', label: 'Crater lake — Queen Elizabeth NP' },
+  { src: 'images/punishment-island.jpg', label: 'Punishment Island — Lake Bunyonyi' },
 ];
 
 let lbIndex = 0;
