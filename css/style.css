@@ -214,19 +214,16 @@ img { display: block; max-width: 100%; }
   color: var(--white);
 }
 
-/* Background — scenic green/savannah gradient as placeholder.
-   To use a real photo: change background-image on .hero__bg to url('../images/hero.jpg') */
+/* Hero background image — Wikimedia Commons (freely licensed) */
 .hero__bg {
   position: absolute; inset: 0;
   background:
     linear-gradient(to right,
-      rgba(26,71,49,.88) 0%,
-      rgba(26,71,49,.70) 35%,
-      rgba(26,71,49,.30) 65%,
-      rgba(26,71,49,.15) 100%),
-    linear-gradient(160deg,
-      #1a4731 0%, #2d7a4f 25%, #5a9a40 45%,
-      #8dc044 60%, #c8d060 75%, #3a7a60 90%, #1a4731 100%);
+      rgba(26,71,49,.82) 0%,
+      rgba(26,71,49,.55) 35%,
+      rgba(26,71,49,.20) 65%,
+      rgba(26,71,49,.10) 100%),
+    url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Murchison_falls_National_Park.2.jpg');
   background-size: cover; background-position: center;
 }
 .hero__overlay { position: absolute; inset: 0; background: rgba(0,0,0,.12); pointer-events: none; }
@@ -345,13 +342,12 @@ section { padding-block: 3.5rem; }
 }
 .dest-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 
-/* Card images as scenic gradients — replace with real photos:
-   .dest-card--murchison { background: url('../images/murchison.jpg') center/cover; } */
-.dest-card--murchison  { background: linear-gradient(170deg,#2d5a1a 0%,#4a8a28 40%,#8aaa40 70%,#5a7a30 100%); }
-.dest-card--bwindi     { background: linear-gradient(170deg,#0d2b1a 0%,#1a5c35 40%,#2d8a50 70%,#4aaa70 100%); }
-.dest-card--queen      { background: linear-gradient(170deg,#5c3a0a 0%,#8a6020 40%,#c89030 70%,#e0b040 100%); }
-.dest-card--bunyonyi   { background: linear-gradient(170deg,#0a2a4a 0%,#1a5080 40%,#2a80b0 70%,#60b0d0 100%); }
-.dest-card--zanzibar   { background: linear-gradient(170deg,#0a3a3a 0%,#1a7070 40%,#2ab0a0 70%,#60d0c0 100%); }
+/* Destination card images — Wikimedia Commons (freely licensed) */
+.dest-card--murchison  { background: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Murchison_Falls_-_by_Boschlech.jpg') center/cover; }
+.dest-card--bwindi     { background: url('https://upload.wikimedia.org/wikipedia/commons/e/e1/Bwindi_Impenetrable_National_Park-112393.jpg') center/cover; }
+.dest-card--queen      { background: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg') center/cover; }
+.dest-card--bunyonyi   { background: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Lake_Bunyonyi_%288146148093%29.jpg') center/cover; }
+.dest-card--zanzibar   { background: url('https://upload.wikimedia.org/wikipedia/commons/8/89/Pongwe_Beach_Zanzibar.jpg') center/cover; }
 
 .dest-card__overlay {
   position: absolute; inset: 0;
@@ -393,12 +389,12 @@ section { padding-block: 3.5rem; }
 }
 .pkg-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
 
-/* Package images — gradients as placeholders */
+/* Package images — Wikimedia Commons (freely licensed) */
 .pkg-card__img { height: 185px; background-size: cover; background-position: center; }
-.pkg-card__img--gorilla   { background: linear-gradient(170deg,#0d2b1a,#1a5c35,#2d8a50); }
-.pkg-card__img--safari    { background: linear-gradient(170deg,#5c3a0a,#8a6020,#c89030); }
-.pkg-card__img--murchison { background: linear-gradient(170deg,#2d5a1a,#4a8a28,#8aaa40); }
-.pkg-card__img--zanzibar  { background: linear-gradient(170deg,#0a3a3a,#1a7070,#2ab0a0); }
+.pkg-card__img--gorilla   { background: url('https://upload.wikimedia.org/wikipedia/commons/8/85/Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg') center/cover; }
+.pkg-card__img--safari    { background: url('https://upload.wikimedia.org/wikipedia/commons/c/cd/Tree_lion_2.jpg') center/cover; }
+.pkg-card__img--murchison { background: url('https://upload.wikimedia.org/wikipedia/commons/c/c9/Murchison_falls_National_Park.2.jpg') center/cover; }
+.pkg-card__img--zanzibar  { background: url('https://upload.wikimedia.org/wikipedia/commons/d/d6/Kendwa_Beach_%28Sunset_Kendwa_Hotel%29.JPG') center/cover; }
 
 .pkg-card__body { padding: .9rem 1rem; display: flex; flex-direction: column; flex: 1; }
 .pkg-card__name { font-size: .95rem; font-weight: 700; color: var(--text); margin-bottom: .5rem; }
@@ -504,13 +500,13 @@ section { padding-block: 3.5rem; }
 }
 .gallery-strip__item:hover { transform: scale(1.04); opacity: .9; }
 
-/* Gallery item colours */
-.gallery-strip__item--1 { background: linear-gradient(135deg,#0d2b1a,#2d8a50); }
-.gallery-strip__item--2 { background: linear-gradient(135deg,#2d5a1a,#8aaa40); }
-.gallery-strip__item--3 { background: linear-gradient(135deg,#5c3a0a,#c89030); }
-.gallery-strip__item--4 { background: linear-gradient(135deg,#0a3a3a,#2ab0a0); }
-.gallery-strip__item--5 { background: linear-gradient(135deg,#0a2a4a,#2a80b0); }
-.gallery-strip__item--6 { background: linear-gradient(135deg,#4a1a3a,#9a5090); }
+/* Gallery images — Wikimedia Commons (freely licensed) */
+.gallery-strip__item--1 { background: url('https://upload.wikimedia.org/wikipedia/commons/8/85/Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg') center/cover; }
+.gallery-strip__item--2 { background: url('https://upload.wikimedia.org/wikipedia/commons/b/bb/Murchison_Falls_-_by_Boschlech.jpg') center/cover; }
+.gallery-strip__item--3 { background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/African_elephant.jpg') center/cover; }
+.gallery-strip__item--4 { background: url('https://upload.wikimedia.org/wikipedia/commons/f/f7/Zanzibar_Sunset.jpg') center/cover; }
+.gallery-strip__item--5 { background: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Lake_Bunyonyi_%288146148093%29.jpg') center/cover; }
+.gallery-strip__item--6 { background: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg') center/cover; }
 
 .gallery-strip__arrow {
   position: absolute; top: 50%; transform: translateY(-50%);
@@ -531,7 +527,7 @@ section { padding-block: 3.5rem; }
 
 .svc-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -1021,3 +1017,223 @@ body.loaded { opacity: 1; }
   .stats__inner { gap: 1rem; justify-content: space-around; }
   .stat-item { padding-inline: .5rem; flex: 1 1 40%; }
 }
+
+/* =============================================
+   DESTINATION DETAIL ACCORDIONS
+   ============================================= */
+.dest-details { margin-top: 2rem; display: flex; flex-direction: column; gap: .75rem; }
+
+.dest-detail {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--white);
+  transition: box-shadow var(--t);
+}
+.dest-detail:hover { box-shadow: var(--shadow-sm); }
+
+.dest-detail__header {
+  display: flex; align-items: center; gap: .75rem;
+  width: 100%; padding: .65rem .9rem;
+  background: var(--white); border: none; cursor: pointer;
+  font-family: var(--font); font-size: .9rem; font-weight: 700;
+  color: var(--text); text-align: left;
+  transition: background var(--t);
+}
+.dest-detail__header:hover { background: var(--off-white); }
+
+.dest-detail__thumb {
+  width: 3.5rem; height: 2.5rem; border-radius: var(--radius-sm);
+  flex-shrink: 0; background-size: cover; background-position: center;
+}
+
+.dest-detail__title { flex: 1; font-size: .88rem; }
+
+.dest-detail__chevron {
+  width: 1.2rem; height: 1.2rem; fill: none; stroke: var(--text-muted);
+  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform var(--t); flex-shrink: 0;
+}
+.dest-detail[aria-expanded="true"] .dest-detail__chevron,
+.dest-detail__header[aria-expanded="true"] .dest-detail__chevron { transform: rotate(180deg); }
+
+.dest-detail__content {
+  max-height: 0; overflow: hidden;
+  transition: max-height .45s ease;
+}
+.dest-detail.open .dest-detail__content { max-height: 1200px; }
+
+.dest-detail__grid {
+  display: grid; grid-template-columns: 1fr 1.5fr; gap: 1.5rem;
+  padding: 1.25rem;
+}
+.dest-detail__photo {
+  border-radius: var(--radius-md); min-height: 200px;
+  background-size: cover; background-position: center;
+}
+.dest-detail__info { display: flex; flex-direction: column; gap: .6rem; }
+.dest-detail__name { font-size: 1.05rem; font-weight: 700; color: var(--green-dark); }
+.dest-detail__location { font-size: .8rem; color: var(--text-muted); }
+.dest-detail__desc { font-size: .82rem; line-height: 1.7; color: var(--text); }
+.dest-detail__section h4 { font-size: .82rem; font-weight: 700; color: var(--green-dark); margin-bottom: .35rem; }
+.dest-detail__section ul { list-style: none; padding: 0; }
+.dest-detail__section ul li {
+  font-size: .78rem; color: var(--text); line-height: 1.7;
+  padding-left: 1.1rem; position: relative;
+}
+.dest-detail__section ul li::before {
+  content: '▸'; position: absolute; left: 0; color: var(--orange); font-size: .7rem;
+}
+
+@media (max-width: 600px) {
+  .dest-detail__grid { grid-template-columns: 1fr; }
+  .dest-detail__photo { min-height: 160px; }
+}
+
+/* =============================================
+   PACKAGE DETAIL MODALS
+   ============================================= */
+.pkg-detail-btn { margin-top: .5rem; font-size: .72rem; color: var(--green-dark); text-decoration: underline; cursor: pointer; background: none; border: none; font-family: var(--font); }
+.pkg-detail-btn:hover { color: var(--orange); }
+
+.pkg-modal {
+  position: fixed; inset: 0; z-index: 600;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem; opacity: 0; visibility: hidden;
+  transition: opacity var(--t), visibility var(--t);
+}
+.pkg-modal.open { opacity: 1; visibility: visible; }
+.pkg-modal__bg {
+  position: absolute; inset: 0; background: rgba(0,0,0,.65);
+}
+.pkg-modal__box {
+  position: relative; background: var(--white);
+  border-radius: var(--radius-lg); max-width: 720px; width: 100%;
+  max-height: 85vh; overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(20px); transition: transform .3s ease;
+}
+.pkg-modal.open .pkg-modal__box { transform: none; }
+.pkg-modal__close {
+  position: absolute; top: .75rem; right: .75rem; z-index: 2;
+  width: 2rem; height: 2rem; border-radius: 50%;
+  background: rgba(0,0,0,.5); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  border: none; cursor: pointer;
+}
+.pkg-modal__hero { height: 180px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; background-size: cover; background-position: center; }
+.pkg-modal__body { padding: 1.5rem; }
+.pkg-modal__title { font-size: 1.3rem; font-weight: 700; color: var(--green-dark); margin-bottom: .25rem; }
+.pkg-modal__meta { display: flex; gap: 1rem; font-size: .8rem; color: var(--text-muted); margin-bottom: 1rem; flex-wrap: wrap; }
+.pkg-modal__meta span { display: inline-flex; align-items: center; gap: .25rem; }
+.pkg-modal__desc { font-size: .85rem; line-height: 1.7; margin-bottom: 1rem; }
+.pkg-modal__section-title { font-size: .85rem; font-weight: 700; color: var(--green-dark); margin-bottom: .5rem; }
+.pkg-modal__itinerary { list-style: none; padding: 0; margin-bottom: 1rem; }
+.pkg-modal__itinerary li {
+  font-size: .8rem; line-height: 1.65; padding: .5rem .75rem;
+  border-left: 3px solid var(--orange); background: var(--off-white);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: .4rem;
+}
+.pkg-modal__itinerary li strong { color: var(--green-dark); }
+.pkg-modal__incl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.pkg-modal__incl-list, .pkg-modal__excl-list { list-style: none; padding: 0; }
+.pkg-modal__incl-list li, .pkg-modal__excl-list li {
+  font-size: .78rem; padding: .2rem 0 .2rem 1.3rem; position: relative; line-height: 1.55;
+}
+.pkg-modal__incl-list li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+.pkg-modal__excl-list li::before { content: '✗'; position: absolute; left: 0; color: #c0392b; font-weight: 700; }
+.pkg-modal__accom { font-size: .8rem; line-height: 1.65; padding: .75rem; background: var(--off-white); border-radius: var(--radius-sm); margin-bottom: 1rem; }
+.pkg-modal__cta { display: flex; gap: .75rem; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .pkg-modal__incl-grid { grid-template-columns: 1fr; }
+  .pkg-modal__hero { height: 130px; }
+  .pkg-modal__body { padding: 1rem; }
+}
+
+/* =============================================
+   LIGHTBOX
+   ============================================= */
+.lightbox {
+  position: fixed; inset: 0; z-index: 700;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.92); opacity: 0; visibility: hidden;
+  transition: opacity var(--t), visibility var(--t);
+}
+.lightbox.open { opacity: 1; visibility: visible; }
+.lightbox__img {
+  max-width: 88vw; max-height: 82vh; border-radius: var(--radius-sm);
+  object-fit: contain; box-shadow: 0 8px 40px rgba(0,0,0,.5);
+}
+.lightbox__caption {
+  position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,.85); font-size: .82rem; text-align: center;
+  max-width: 90vw;
+}
+.lightbox__close {
+  position: absolute; top: 1rem; right: 1rem;
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  background: rgba(255,255,255,.15); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  border: none; cursor: pointer; transition: background var(--t);
+}
+.lightbox__close:hover { background: rgba(255,255,255,.3); }
+.lightbox__nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 2.75rem; height: 2.75rem; border-radius: 50%;
+  background: rgba(255,255,255,.12); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  border: none; cursor: pointer; font-size: 1.5rem; transition: background var(--t);
+}
+.lightbox__nav:hover { background: rgba(255,255,255,.25); }
+.lightbox__prev { left: 1rem; }
+.lightbox__next { right: 1rem; }
+.lightbox__counter {
+  position: absolute; top: 1.25rem; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,.6); font-size: .78rem;
+}
+
+/* =============================================
+   GOOGLE MAPS EMBED
+   ============================================= */
+.contact__map {
+  margin-top: 1.5rem; border-radius: var(--radius-md);
+  overflow: hidden; box-shadow: var(--shadow-sm);
+  border: 1.5px solid var(--border);
+}
+.contact__map iframe {
+  width: 100%; height: 280px; border: 0; display: block;
+}
+
+/* =============================================
+   EXPANDED GALLERY (grid view)
+   ============================================= */
+.gallery-section { background: var(--off-white); }
+.gallery-full { margin-top: 1.5rem; }
+.gallery-full__grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem;
+}
+.gallery-full__item {
+  height: 140px; border-radius: var(--radius-md); overflow: hidden;
+  cursor: pointer; position: relative;
+  transition: transform var(--t), box-shadow var(--t);
+}
+.gallery-full__item:hover { transform: scale(1.03); box-shadow: var(--shadow-md); }
+.gallery-full__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.gallery-full__item:hover img { transform: scale(1.08); }
+.gallery-full__overlay {
+  position: absolute; inset: 0; display: flex; align-items: flex-end;
+  padding: .5rem; background: linear-gradient(to top, rgba(0,0,0,.6), transparent);
+  opacity: 0; transition: opacity var(--t);
+}
+.gallery-full__item:hover .gallery-full__overlay { opacity: 1; }
+.gallery-full__label { color: var(--white); font-size: .72rem; font-weight: 600; }
+
+@media (max-width: 600px) {
+  .gallery-full__grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-full__item { height: 110px; }
+}
+
+/* =============================================
+   SVG FAVICON (data URI used in HTML head)
+   ============================================= */

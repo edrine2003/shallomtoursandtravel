@@ -410,3 +410,142 @@ if ('IntersectionObserver' in window) {
 
   revealTargets.forEach(el => revealObs.observe(el));
 }
+
+/* =============================================
+   DESTINATION DETAIL ACCORDIONS
+   ============================================= */
+document.querySelectorAll('.dest-detail__header').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const detail = btn.closest('.dest-detail');
+    const isOpen = detail.classList.contains('open');
+    document.querySelectorAll('.dest-detail.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.dest-detail__header').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      detail.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+/* Open accordion from card link */
+document.querySelectorAll('[data-dest-link]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.getElementById(link.dataset.destLink);
+    if (target) {
+      target.classList.add('open');
+      target.querySelector('.dest-detail__header').setAttribute('aria-expanded', 'true');
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+});
+
+/* =============================================
+   LIGHTBOX GALLERY
+   ============================================= */
+const lightboxImages = [
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/8/85/Mountain_gorilla_%28Gorilla_beringei_beringei%29_female_eating_root.jpg', label: 'Mountain gorilla — Bwindi Impenetrable Forest' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Murchison_Falls_-_by_Boschlech.jpg', label: 'Murchison Falls — the Nile River exploding through a narrow gorge' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/e/ec/African_elephant.jpg', label: 'African elephant — Uganda wildlife' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Zanzibar_Sunset.jpg', label: 'Zanzibar sunset — Indian Ocean coastline' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Lake_Bunyonyi_%288146148093%29.jpg', label: 'Lake Bunyonyi — Place of Many Little Birds' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Hippopotami_in_the_Kazinga_Channel%2C_Queen_Elizabeth_National_Park.jpg', label: 'Hippos in the Kazinga Channel — Queen Elizabeth NP' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/c/cd/Tree_lion_2.jpg', label: 'Tree-climbing lion — Queen Elizabeth NP, Ishasha sector' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Bwindi_mountains.jpg', label: 'Bwindi mountains — misty rainforest landscape' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Kendwa_Beach_%28Sunset_Kendwa_Hotel%29.JPG', label: 'Kendwa Beach — Zanzibar' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/3/3b/Uganda-Kob.jpg', label: 'Uganda Kob — Queen Elizabeth NP' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/f/f1/Crater_lake_in_Queen_Elizabeth_National_Park.jpg', label: 'Crater lake — Queen Elizabeth NP' },
+  { src: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Punishment_Island.jpg', label: 'Punishment Island — Lake Bunyonyi' },
+];
+
+let lbIndex = 0;
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lightbox-img');
+const lbCaption = document.getElementById('lightbox-caption');
+const lbCounter = document.getElementById('lightbox-counter');
+
+function openLightbox(idx) {
+  lbIndex = idx;
+  updateLightbox();
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function updateLightbox() {
+  const item = lightboxImages[lbIndex];
+  if (!item) return;
+  lbImg.src = item.src;
+  lbImg.alt = item.label;
+  lbCaption.textContent = item.label;
+  lbCounter.textContent = `${lbIndex + 1} / ${lightboxImages.length}`;
+}
+
+function lbNext() { lbIndex = (lbIndex + 1) % lightboxImages.length; updateLightbox(); }
+function lbPrev() { lbIndex = (lbIndex - 1 + lightboxImages.length) % lightboxImages.length; updateLightbox(); }
+
+document.getElementById('lb-close')?.addEventListener('click', closeLightbox);
+document.getElementById('lb-next')?.addEventListener('click', lbNext);
+document.getElementById('lb-prev')?.addEventListener('click', lbPrev);
+lightbox?.querySelector('.lightbox__bg')?.addEventListener('click', closeLightbox);
+document.addEventListener('keydown', e => {
+  if (!lightbox?.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') lbNext();
+  if (e.key === 'ArrowLeft') lbPrev();
+});
+
+/* Gallery strip items → open lightbox */
+document.querySelectorAll('.gallery-strip__item').forEach((el, i) => {
+  el.addEventListener('click', () => openLightbox(i));
+});
+
+/* Full gallery items → open lightbox */
+document.querySelectorAll('.gallery-full__item').forEach(el => {
+  el.addEventListener('click', () => {
+    const idx = parseInt(el.dataset.lbIndex, 10) || 0;
+    openLightbox(idx);
+  });
+});
+
+/* =============================================
+   PACKAGE DETAIL MODALS
+   ============================================= */
+document.querySelectorAll('[data-pkg-detail]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modal = document.getElementById(btn.dataset.pkgDetail);
+    if (modal) {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+
+document.querySelectorAll('.pkg-modal__close').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.closest('.pkg-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+document.querySelectorAll('.pkg-modal__bg').forEach(bg => {
+  bg.addEventListener('click', () => {
+    bg.closest('.pkg-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.pkg-modal.open').forEach(m => {
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+});
